@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package arithmetic;
+
+service Arithmetic {
+    rpc Add (ArithmeticRequest) returns (Result);
+    rpc Subtract (ArithmeticRequest) returns (Result);
+    rpc Multiply (ArithmeticRequest) returns (Result);
+    rpc Divide (ArithmeticRequest) returns (Result);
+}
+
+message ArithmeticRequest {
+    double num1 = 1;
+    double num2 = 2;
+}
+
+message Result {
+    double result = 1;
+}
+
